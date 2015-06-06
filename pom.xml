@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>websocket</artifactId>
+        <groupId>org.glassfish.javaeetutorial</groupId>
+        <version>7.0.5</version>
+    </parent>
+    
+    <groupId>org.glassfish.javaeetutorial</groupId>
+    <artifactId>websocketbot</artifactId>
+    <packaging>war</packaging>
+    
+    <name>websocketbot</name>
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+            <classifier>jdk15</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.ansj</groupId>
+            <artifactId>tree_split</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ansj</groupId>
+            <artifactId>ansj_seg</artifactId>
+            <version>0.9</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache</groupId>
+            <artifactId>derby</artifactId>
+            <version>2.0</version>
+            <scope>system</scope>  
+            <!--本地jar的路径,相对或者绝对都可以-->  
+            <systemPath>D:\derbyjar\derby.jar</systemPath>  
+        </dependency>
+        <dependency>
+            <groupId>org.apache</groupId>
+            <artifactId>derbyclient</artifactId>
+            <version>2.0</version>
+            <scope>system</scope>  
+            <!--本地jar的路径,相对或者绝对都可以-->  
+            <systemPath>D:\derbyjar\derbyclient.jar</systemPath>  
+        </dependency>
+        <dependency>
+            <groupId>org</groupId>
+            <artifactId>nlp-lang</artifactId>
+            <version>0.3</version>
+            <scope>system</scope>  
+            <!--本地jar的路径,相对或者绝对都可以-->  
+            <systemPath>D:\Program Files\Java\jdk1.7.0_75\jre\lib\ext\nlp-lang-0.3.jar</systemPath>  
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>            
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
